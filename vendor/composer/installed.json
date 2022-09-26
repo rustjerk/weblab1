@@ -1,0 +1,135 @@
+{
+    "packages": [
+        {
+            "name": "opis/database",
+            "version": "4.2.1",
+            "version_normalized": "4.2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/opis/database.git",
+                "reference": "5f6839e75ff04e878ec6aec880df935c3061af20"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/opis/database/zipball/5f6839e75ff04e878ec6aec880df935c3061af20",
+                "reference": "5f6839e75ff04e878ec6aec880df935c3061af20",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5 || ^7.0",
+                "symfony/yaml": "^3.4"
+            },
+            "time": "2021-04-14T19:33:16+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.1.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Opis\\Database\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Marius Sarca",
+                    "email": "marius.sarca@gmail.com"
+                },
+                {
+                    "name": "Sorin Sarca",
+                    "email": "sarca_sorin@hotmail.com"
+                }
+            ],
+            "description": "A database abstraction layer over PDO, that provides a powerful and intuitive query builder, bundled with an easy to use schema builder",
+            "homepage": "https://opis.io/database",
+            "keywords": [
+                "Abstraction Layer",
+                "database",
+                "mysql",
+                "postgre",
+                "query",
+                "query builder",
+                "schema builder",
+                "sql",
+                "sqlite"
+            ],
+            "support": {
+                "issues": "https://github.com/opis/database/issues",
+                "source": "https://github.com/opis/database/tree/4.2.1"
+            },
+            "install-path": "../opis/database"
+        },
+        {
+            "name": "opis/orm",
+            "version": "1.0.1",
+            "version_normalized": "1.0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/opis/orm.git",
+                "reference": "2723235be55242cd20452b8c9648d4823b7ce8b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/opis/orm/zipball/2723235be55242cd20452b8c9648d4823b7ce8b5",
+                "reference": "2723235be55242cd20452b8c9648d4823b7ce8b5",
+                "shasum": ""
+            },
+            "require": {
+                "opis/database": "^4.0.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5"
+            },
+            "time": "2018-12-13T12:16:52+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Opis\\ORM\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Marius Sarca",
+                    "email": "marius.sarca@gmail.com"
+                },
+                {
+                    "name": "Sorin Sarca",
+                    "email": "sarca_sorin@hotmail.com"
+                }
+            ],
+            "description": "Powerful ORM library",
+            "homepage": "https://opis.io/orm",
+            "keywords": [
+                "data-mapper",
+                "orm"
+            ],
+            "support": {
+                "issues": "https://github.com/opis/orm/issues",
+                "source": "https://github.com/opis/orm/tree/1.0.1"
+            },
+            "install-path": "../opis/orm"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

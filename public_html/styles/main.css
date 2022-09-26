@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  cursor: url('../img/cursor.png'), default;
+}
+
+img {
+  user-select: none;
+  pointer-events: none;
+}
+
+html {
+  font-family: 'Neucha', cursive;
+  font-size: 18px;
+  height: 100%;
+  background-color: #e9e8e6;
+  overflow-x: hidden;
+}
+
+body {
+  padding: 16px;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #e9e8e6;
+  background-image: url("../img/background.jpg");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+.anime {
+  position: fixed;
+  bottom: 0;
+  filter: drop-shadow(0 5px 16px rgba(0, 0, 0, 0.5));
+  height: 80%;
+}
+
+.fly {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.anime.left {
+  left: 30px;
+}
+
+.anime.right {
+  right: 30px;
+}
+
+.anime.center-left {
+  height: 200px;
+  left: 350px;
+}
+
+.anime.center-right {
+  height: 200px;
+  right: 350px;
+}
+
+.anime.top-right {
+  height: 200px;
+  top: 0;
+  right: 20px;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  border-collapse: collapse;
+}
+
+.header td {
+  padding: 24px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.105);
+}
+
+.header h1 {
+  text-align: center;
+  font-family: monospace;
+  color: #333;
+  margin-bottom: 16px;
+  text-shadow: 5px 0 rgba(255, 0, 0, 0.4), -5px 0 rgba(0, 0, 255, 0.4);
+}
+
+.main td {
+  padding: 24px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.row:first-child {
+  margin-top: 0;
+}
+
+ol {
+  list-style-position: inside;
+}
+
+h3 {
+  text-align: center;
+}
+
+.marshal {
+  display: inline-block;
+  height: 16px;
+  padding: 0 16px;
+  transform: scale(2) rotate(90deg);
+}
+
+#map {
+  position: relative;
+  margin: 0 auto;
+}
+
+#map .george {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-image: url("../img/map.png");
+  background-repeat: no-repeat;
+  background-size: 290px 290px;
+  background-color: #333;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.5);
+  border: 5px dotted #D85810;
+  overflow: hidden;
+}
+
+.controls > td {
+  padding: 24px;
+}
+
+fieldset {
+  display: flex;
+  flex-flow: row nowrap;
+  border: 2px solid #333;
+  padding: 8px;
+}
+
+fieldset:first-child {
+  flex: 2 0 auto;
+}
+
+fieldset legend {
+  padding: 0 16px;
+  margin-left: 16px;
+  font-weight: bold;
+}
+
+.radio-button {
+  display: flex;
+  position: relative;
+  flex-flow: row nowrap;
+  flex: 1 0 auto;
+}
+
+.radio-button:before {
+  content: "";
+  width: 50px;
+  height: 100px;
+  bottom: 0px;
+  left: 50%;
+  position: absolute;
+  background-image: url("../img/chika.gif");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 0;
+  opacity: 0.7;
+  transform: scale(100%, 0%) translate(-25px, -20px);
+  transform-origin: bottom center;
+  transition: all 400ms ease;
+}
+
+.radio-button.selected:before {
+  transform: scale(100%, 100%) translate(-25px, 0);
+}
+
+input[type="button"], input[type="submit"] {
+  z-index: 2;
+  background-size: 100% 100%;
+  font-family: 'Neucha', cursive;
+  font-size: 16px;
+  line-height: 32px;
+  text-shadow: 2px 0 #ffc800, -2px 0 #ffc800, 0 2px #ffc800, 0 -2px #ffc800,
+             1px 1px #ffc800, -1px -1px #ffc800, 1px -1px #ffc800, -1px 1px #ffc800;
+  color: black;
+  padding: 4px 0x;
+  flex: 1 0 auto;
+  text-align: center;
+  margin: 4px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  transition: all 300ms ease;
+}
+
+input[type="button"] {
+  background-image: url("../img/flag.png");
+}
+
+.radio-button.selected input, input[type="button"]:hover {
+  transform: rotate(360deg) scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  background-image: url("../img/ussr.jpg");
+}
+
+input[type="submit"] {
+  background-image: url("https://i.imgur.com/pYfusvx.gif");
+  height: 64px;
+  margin: 0 auto;
+  flex: 0 1 400px;
+}
+
+input[type="submit"]:hover {
+  transform: scale(1, 2.5);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.checkbox {
+  position: relative;
+  margin: 6px 0;
+  padding-right: 10px;
+  flex: 1 0 auto;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  margin-right: 6px;
+}
+
+.checkbox::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 24px;
+  height: 24px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-image: url("../img/whitecat.gif");
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.check {
+  display: block;
+  position: absolute;
+  top: -28px;
+  left: -2px;
+  content: '';
+  width: 64px;
+  height: 64px;
+  background-image: url("../img/vote.png");
+  filter: hue-rotate(-30deg) drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+input[type="checkbox"]:checked ~ .check {
+  opacity: 1;
+}
+
+.checkbox span {
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  font-size: 24px;
+}
+
+.text-input {
+  flex: 1 0 auto;
+}
+
+.mob-col .text-input {
+  flex: 0 0 auto;
+}
+
+.text-input span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.text-input .error {
+  color: #ff0000;
+}
+
+.text-input input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  outline: none;
+  border: 2px solid black;
+  padding: 6px;
+  font-size: 18px;
+  font-family: 'Neucha', cursive;
+}
+
+.result {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.result thead {
+  font-weight: bold;
+}
+
+.result td {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+  padding: 8px;
+}
+
+.result td:first-child {
+  border-left: none;
+  padding-left: 24px;
+}
+
+.result td:last-child {
+  border-right: none;
+  padding-right: 24px;
+  white-space: nowrap;
+}
+
+.result td:nth-child(2) {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.miss, .hit {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+  background-size: 100%;
+}
+
+.miss {
+  background-image: url("../img/miss.gif");
+}
+
+.hit {
+  background-image: url("../img/hit.gif");
+}
+
+.plane, .bomb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#plane-proto, #bomb-proto {
+  display: none;
+}
+
+.plane {
+  transform: translate(-32px, -16px);
+  z-index: 999;
+}
+
+.plane {
+  animation-name: plane;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  left: 350px;
+}
+
+@keyframes plane {
+  from {
+    left: -50px;
+  }
+
+  to {
+    left: 350px;
+  }
+}
+
+.bomb {
+  transform: translate(-45px, -50%);
+  z-index: 998;
+  background: url("../img/nuclear.png");
+  opacity: 0;
+  width: 64px;
+  height: 64px;
+  animation-name: bomb-sprite, bomb-opacity; 
+  animation-duration: 1s;
+  animation-delay: 0.7s;
+  animation-timing-function: steps(22);
+  animation-iteration-count: 1;
+}
+
+@keyframes bomb-sprite {
+  from { background-position: 0px; }
+  to { background-position: -1408px; }
+}
+
+@keyframes bomb-opacity {
+  0% { opacity: 1; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@media (max-width: 700px) {
+  .mob-hide {
+    display: none;
+  }
+  
+  .mob-col {
+    flex-flow: column nowrap;
+    align-items: stretch;
+    gap: 8px;
+  }
+  
+  .mob-col input[type="submit"] {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
